@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>카페</title>
+    <style>
+        *{margin:0; padding:0;}
+        li{list-style: none;}
+        a{
+            display:block; 
+            text-decoration: none;
+            color:inherit;
+        }
+        img{display:block; border:0;}
+
+        #wrap{
+            border:1px #ccc solid;
+            width:960px; margin: 0 auto;
+        }
+        header{
+            position: relative;
+            padding-top: 50%;
+            background: url("images/header.jpg") no-repeat;
+            background-size: cover;
+            background-position: center center;
+        }
+        nav{
+            background:#333;
+            position: absolute;
+            top:0;
+            width:100%;
+        }
+        .gnb{width:50%; margin: 0 auto;
+            display:flex;
+            justify-content: space-around;
+            
+        }
+        /* .gnb li{width:33.333%;} */
+        .gnb a{
+            /* text-align: center; */
+            line-height: 40px;
+            color:#fff;
+        }
+        .title{
+            padding:30px 50px; 
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+        .content{
+            width:80%;
+            margin: 0 auto;
+            display:flex;
+        }
+        .textbox{
+            padding:30px;
+            line-height: 40px;
+            font-size: 1.2rem;
+        }
+        .textbox span{
+            font-size: .8rem;
+        }
+        #intro{
+            padding-bottom: 80px;
+        }
+        #map{
+            background:#eee;
+            padding-bottom: 80px;
+        }
+        #choice{
+            padding-bottom: 80px;
+        }
+        #choice li{
+            list-style: decimal;
+            font-size: 1rem;
+        }
+        #choice .textbox{
+            padding:0 30px;
+        }
+        footer{
+            text-align: center;
+            line-height: 100px;
+            background:#333;
+            color:#fff;
+        }
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <header>
+            <nav>
+                <ul class="gnb">
+                    <li><a href="#intro">카페 소개</a></li>
+                    <li><a href="#map">오시는 길</a></li>
+                    <li><a href="#choice">이 달의 추천</a></li>
+                </ul>
+            </nav>
+        </header>
+        <div id="intro">
+            <div class="title">카페 소개</div>
+            <div class="content">
+                <div class="imgbox">
+                    <img src="images/coffee.jpg" alt="">
+                </div>
+                <div class="textbox"> 
+                    영업 시간 : 오전 9시 ~ 밤 10시<br>
+                    휴무 : 매주 수요일<br>
+                    <span>(수요일이 공휴일일 경우 수요일 영업, 다음날 휴무)</span>
+                </div>
+            </div>
+        </div>
+        <div id="map">
+            <div class="title">오시는 길</div>
+            <div class="content">
+                <div class="imgbox">
+                    <img src="images/map.jpg" alt="">
+                </div>
+                <div class="textbox"> 
+                    서귀포시 안덕면 사계리 oooo-ooo<br>
+                    제주 올레 10코스 산방산 근처<br>
+                    
+                </div>
+            </div>
+        </div>
+        <div id="choice">
+            <div class="title">이 달의 추천</div>
+            <div class="content">
+                <div class="textbox"> 
+                    <h3>핸드드립 아이스커피</h3>
+                    <ol>
+                        <li>1인분 기준으로 서버에 각얼음 5조각(한조각의 20cc) 넣고 추출을 시작한다.</li>
+                        <li>평상시 보다 원두의 양은 2배 정도 (20g)와 추출액은 얼음 포함해서 200cc까지 내린다.</li>
+                        <li>아이스 잔에 얼음 6~7개 섞어서 시원하게 마신다.</li>
+                    </ol>
+                </div>
+                <div class="imgbox">
+                    <img src="images/ice.jpg" alt="">
+                </div>
+            </div>
+        </div>
+        <footer>
+            My times with Coffee
+        </footer>
+    </div>
+</body>
+</html>

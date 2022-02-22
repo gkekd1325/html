@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cafe Pra</title>
+    <style>
+        *{margin: 0; padding: 0;}
+        #wrap{
+            width: 960px;
+            margin: 0 auto;
+            border: 2px solid gray;
+        }
+        nav li{list-style: none;}
+        a{
+            text-decoration: none;
+            color: white;
+            display: block;
+            line-height: 40px;
+        }
+        nav{
+            background: black;
+            position: absolute;
+            top: 0;
+            width: 100%;
+        }
+        .menu{
+            width: 50%;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-around;
+        }
+        header{
+            background: url("images/header.jpg") no-repeat;
+            background-size: cover;
+            background-position: center center;
+            padding-top: 50%; /* 부모의 가로를 기준으로 50% */
+            position: relative;
+        }
+        footer{
+            color: white;
+            line-height: 100px;
+            background: black;
+            text-align: center;
+        }
+        h1{
+            padding: 30px;
+            font-size: 2rem;
+        }
+        .a{
+            padding:50px;
+            display: flex;
+        }
+        .text{
+            padding-left: 40px;
+            line-height: 40px;
+        }
+        section img{
+            padding-left: 30px;
+        }
+        .imgbox{
+            width: 350px;
+            height: 206px;
+            overflow: hidden;
+            
+        }
+        .imgbox img{transition: 0.3s;}
+        .imgbox:hover img{
+            transform: scale(2,2);
+        }
+        .list{
+            text-align: center;
+        }
+        .list a{
+            line-height: 30px;
+            color: #333;
+        }
+        .html{
+            transition: 0.3s;
+        }
+        .css{
+            transition: 0.5s;
+        }
+        .java{
+            transition: 0.7s;
+        }
+        .imgbox:hover .html{
+            transform: translate(0px, -100px);
+        }
+        .imgbox:hover .css{
+            transform: translate(0px, -100px);
+        }
+        .imgbox:hover .java{
+            transform: translate(0px, -100px);
+        }
+        
+        /* #first{width: 100%;} */
+        #second{background: gainsboro;}
+        /* #third{width: 100%;} */
+
+        @media screen and (max-width:900px){
+            .imgbox{display: none;}
+            article{
+            display: flex;
+            flex-wrap: wrap; /* 넓이보다커지면 아래로 넘김  */
+            }
+            #first, #second{width: 50%;}
+            #third{width: 100%;}
+        }
+        @media screen and (max-width:600px){
+            .imgbox{display: none;}
+            article{
+            display: flex;
+            flex-wrap: wrap; /* 넓이보다커지면 아래로 넘김  */
+            }
+            #first, #second{width: 100%;}
+            #third{width: 100%;}
+        }
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <header>
+            <nav>
+                <ul class="menu">
+                    <li><a href="#first">카페소개</a></li>
+                    <li><a href="#second">오시는 길</a></li>
+                    <li><a href="#third">이 달의 추천</a></li>
+                </ul>
+            </nav>
+        </header>
+        <article>
+            
+                <section id="first">
+                    <h1>카페소개</h1>
+                    <div class="a">
+                        <div class="imgbox">
+                            <img src="images/coffee.jpg" alt="커피">
+                            <div class="list">
+                                <a href="#" class="html">html</a>
+                                <a href="#" class="css">css</a>
+                                <a href="#" class="java">java</a>
+                            </div>                                                            
+                        </div>
+                        <div class="text">
+                            <h3>영업 시간 : 오전 9시 ~ 밤 10시 <br>
+                                휴무 : 매주 수요일
+                            </h3>
+                            (수요일이 공휴일일 경우 수요일 영업, 다음날 휴무)
+                        </div>
+                    </div>
+                </section>
+                <section id="second">
+                    <h1>오시는 길</h1>
+                    <div class="a">
+                        <div class="imgbox">
+                            <img src="images/map.jpg" alt="지도">
+                        </div>
+                        <div class="text">
+                            <h3>서귀포시 안덕면 사계리 oooo-ooo <br>
+    
+                                제주 올레 10코스 산방산 근처
+                            </h3>
+                        </div>
+                    </div>
+                </section>
+                <section id="third">
+                    <h1>이 달의 추천</h1>
+                    <div class="a">
+                        <div class="text">
+                            <h3>핸드드립 아이스커피</h3>
+                            <ul>
+                                <ol>
+                                    <li>1인분 기준으로 서버에 각얼음 5조각(한조각의 20cc) 넣고 추출을 시작한다.</li>
+                                    <li>평상시 보다 원두의 양은 2배 정도 (20g)와 추출액은 얼음 포함해서 200cc까지 내린다.</li>
+                                    <li>아이스 잔에 얼음 6~7개 섞어서 시원하게 마신다</li>
+                                </ol>
+                            </ul>
+                        </div>
+                        <div class="imgbox">
+                            <img src="images/ice.jpg" alt="얼음">
+                        </div>
+                        
+                    </div>
+                </section>
+        </article>
+        <footer>My times with Coffee</footer>
+    </div>
+</body>
+</html>

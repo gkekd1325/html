@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cafe</title>
+    <style>
+        *{margin: 0; padding: 0;}
+        li{list-style: none;}
+        a{
+            text-decoration: none;
+            display: block;
+            transition: 0.3s;
+            line-height: 40px;
+        }
+        img{
+            display: block;
+            border: 0;
+        }
+        #wrap{
+            border: 2px solid gray;
+            width: 960px;
+            margin: 0 auto;
+        }
+        header{
+            padding-top: 50%;
+            background: url("images/header.jpg") no-repeat;
+            background-size: cover;
+            background-position: center center;
+            position: relative; /* nav 넓이 한정 */
+        }
+        nav{
+            background: black;
+            position: absolute;
+            width: 100%;
+            top: 0;
+        }
+        .menu{
+            width: 50%;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-around;
+        }
+        
+        .menu a{
+            color: white;
+        }
+        .title{
+            padding: 40px;
+            font-size: 2rem;
+            font-weight: bold;
+        }
+        .content{
+            width: 80%;
+            margin: 0 auto;
+            display: flex;
+        }
+        .textbox{
+            padding: 30px;
+            line-height: 40px;
+            font-size: 1.2rem;
+        }
+        .textbox span{
+            font-size: .8rem;
+        }
+        #intro{
+            padding-bottom: 80px;
+        }
+        #map{
+            background: gainsboro;
+            padding-bottom: 80px;
+        }
+        
+        #choice li{list-style: decimal; font-size: 1rem;}
+        #choice .textbox{
+            padding:0 30px;
+        }
+        footer{
+            text-align: center;
+            line-height: 100px;
+            background: black;
+            color: white;
+        }
+        #choice{
+            padding-bottom: 80px;
+        }
+        @media screen and (max-width:900px) {
+            .imgbox{
+                display: none;
+            }
+            article{
+                display: flex;
+                flex-wrap: wrap; /* 부모요소들보다 크면 다음줄로 넘김 
+                                    기본값은 nowrap - 부모넓이에 맞게축소*/
+            }
+            #intro, #map{
+                width: 50%;
+            }
+            #choice{
+                width: 100%;
+            }
+        }
+        @media screen and (max-width:600px) {
+            .imgbox{
+                display: none;
+            }
+            article{
+                display: flex;
+                flex-wrap: wrap;
+            }
+            #intro, #map{
+                width: 100%;
+            }
+            #choice{
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <header>
+            <nav>
+                <ul class="menu">
+                    <li><a href="#intro">카페 소개</a></li>
+                    <li><a href="#map">오시는 길</a></li>
+                    <li><a href="#choice">이 달의 추천</a></li>
+                </ul>
+            </nav>
+        </header>
+        <article>
+            <div id="intro">
+                <div class="title">카페소개</div>
+                <div class="content">
+                    <div class="imgbox">
+                        <img src="images/coffee.jpg" alt="커피">
+                    </div>
+                    <div class="textbox">
+                        영업 시간 : 오전 9시 ~ 밤 10시 <br>
+    
+                        휴무 : 매주 수요일 <br>
+                        <span>(수요일이 공휴일일 경우 수요일 영업, 다음날 휴무)</span>
+                    </div>
+                </div>
+            </div>
+            <div id="map">
+                <div class="title">오시는 길</div>
+                <div class="content">
+                    <div class="imgbox">
+                        <img src="images/map.jpg" alt="지도">
+                    </div>
+                    <div class="textbox">
+                        서귀포시 안덕면 사계리 oooo-ooo <br>
+    
+                        제주 올레 10코스 산방산 근처
+                    </div>
+                </div>
+    
+            </div>
+            <div id="choice">
+                <div class="title">이 달의 추천</div>
+                <div class="content">
+                    
+                    <div class="textbox">
+                        <h3>핸드크림 아이스커피</h3> <br>
+                        <ol>
+                            <li>1인분 기준으로 서버에 각얼음 5조각(한조각의 20cc) 넣고 추출을 시작한다.</li>
+                            <li>평상시 보다 원두의 양은 2배 정도 (20g)와 추출액은 얼음 포함해서 200cc까지 내린다.</li>
+                            <li>아이스 잔에 얼음 6~7개 섞어서 시원하게 마신다</li>
+                        </ol>
+                    </div>
+                    <div class="imgbox">
+                        <img src="images/ice.jpg" alt="얼음">
+                    </div>
+                </div>
+                
+            </div>
+        </article>
+        
+        <footer>My times with Coffee</footer>
+    </div>
+</body>
+</html>
