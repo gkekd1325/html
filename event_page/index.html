@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>event page</title>
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <style>
         *{margin: 0; padding: 0;}
         a{
@@ -15,7 +16,8 @@
         li{list-style: none;}
         #main{
             width: 1000px; margin: 0 auto;
-            background: #FFD4E5;
+            /* background: #FFD4E5; */
+            background: linear-gradient(#FFD4E5 /* 0% */, #FFD4E5 60%, #FF7D9F 60%, #FF7D9F 100%);
             height: 2200px;
             position: relative;
         }
@@ -27,10 +29,17 @@
             transition: 0.3s;
         }
         .title{
-            position: absolute; z-index: 3;
-            
-            left: 100px;
-            top: 800px;           
+            position: absolute; 
+            z-index: 3;
+            opacity: 0;
+            left: 150px;
+            top: 759px;  
+            transition: .6s;         
+        }
+        .title.on{                        
+            left: 111px;
+            top: 759px;   
+            opacity: 1;        
         }
         .choice{
             width: 800px;
@@ -38,9 +47,153 @@
             position: relative;
             top: -120px;
             z-index: 10px;
+            background: #FF7D9F;
         }
         .choice li{
             margin-bottom:28px;
+            transition: .6s;
+        }
+        .choice li:nth-child(1){
+            transform: translateX(60px);
+            opacity: 0;
+            transition-delay: .6s;
+        }
+        .choice li:nth-child(2){
+            transform: translateX(60px);
+            opacity: 0;
+            transition-delay: .8s;
+        }
+        .choice li:nth-child(3){
+            transform: translateX(60px);
+            opacity: 0;
+            transition-delay: 1.0s;
+        }
+        .choice li:nth-child(4){
+            transform: translateX(60px);
+            opacity: 0;
+            transition-delay: 1.2s;
+        }
+        .choice.on li:nth-child(1){
+            transform: translateX(0);
+            opacity: 1;
+        }
+        .choice.on li:nth-child(2){
+            transform: translateX(0);
+            opacity: 1;
+        }
+        .choice.on li:nth-child(3){
+            transform: translateX(0);
+            opacity: 1;
+        }
+        .choice.on li:nth-child(4){
+            transform: translateX(0);
+            opacity: 1;
+        }
+        /* #review */
+        #review{
+            margin: 0 auto;
+            width: 1000px; height: 1036px;
+            background: linear-gradient(#FFD4E5 /* 0% */, #FFD4E5 60%, #FEB8D4 60%, #FEB8D4 100%);
+            position: relative;
+        }
+        .review_title{
+            padding-top: 91px;
+            padding-bottom: 25px;
+            position: relative;
+            top: 0;
+            z-index: 2;
+        }
+        .review_title img{
+            margin: 0 auto;
+        }
+        .sns{
+            width: 824px;
+            display: flex;
+            justify-content: space-between;
+            margin:  0 auto;
+            
+        }
+        .sns li{transition: .6s;}
+        .sns li:nth-child(1){
+            transform: translateX(-200px); opacity: 0;
+        }
+        .sns li:nth-child(2){
+            transform: translateX(200px); opacity: 0;
+        }
+        .sns.on li:nth-child(1){
+            transform: translateX(0); opacity: 1;
+        }
+        .sns.on li:nth-child(2){
+            transform: translateX(0); opacity: 1;
+        }
+        #review a{
+            display: block;
+            margin: 45px auto;
+            width: 400px;
+            height: 80px;
+        }
+        .review_bg{position: absolute; top: 0;}
+        .icon{
+            position: absolute;
+            z-index: 100;
+            transition: 0.2s;
+        }
+        .icon0{
+            top:310px;
+            left: 15px;
+            opacity: 0;
+            transition-delay: 1s;
+        }
+        .icon1{
+            top:330px;
+            left: 430px;
+            opacity: 0;
+            transition-delay: 1.5s;
+        }
+        .icon2{
+            top:540px;
+            left: 373px;
+            opacity: 0;
+            transition-delay: 2s;
+        }
+        .icon3{
+            top:400px;
+            left: 830px;
+            opacity: 0;
+            transition-delay: 2.5s;
+        }
+        .icon.on.icon0{
+            top:295px;
+            left: 15px;
+            opacity: 1;
+        }
+        .icon.on.icon1{
+            top:318px;
+            left: 430px;
+            opacity: 1;
+        }
+        .icon.on.icon2{
+            top:525px;
+            left: 373px;
+            opacity: 1;
+        }
+        .icon.on.icon3{
+            top:389px;
+            left: 830px;
+            opacity: 1;
+        }
+        /* #coupon */
+        #coupon{
+            width: 1000px;
+            height: 632px;
+            margin: 0 auto;
+            background: #6A4C4C;
+        }
+        footer{
+            margin: 0 auto;
+            width: 1000px;
+            height: 72px;
+            background: #4E2C2B;
         }
         @keyframes move {
             0%{transform: translate(50px, -50px); opacity: 0.3;}
@@ -61,8 +214,52 @@
             <li><a href="#"><img src="img/01.png" alt=""></a></li>
             <li><a href="#"><img src="img/02.png" alt=""></a></li>
             <li><a href="#"><img src="img/03.png" alt=""></a></li>
-            <li><a href="#"><img src="img/04.png" alt=""></a></li>
-        </ul>
+            <li><a href="#"><img src="img/04.png" alt=""></a></li>            
+        </ul>              
+        
     </div>
+    <div id="review">
+        <div class="review_title">
+            <img src="mying/review title.png" alt="">
+        </div>
+        <ul class="sns">
+            <li><img src="mying/Group 6.png" alt=""></li>
+            <li><img src="mying/Group 7.png" alt=""></li>
+        </ul>
+        <a href="#none">
+            <img src="mying/button.png" alt="">
+        </a>
+        <img src="mying/review-bg.png" alt="" class="review_bg">
+
+        <img src="mying/Component 2.png" alt="" class="icon icon0">
+        <img src="mying/Component 3.png" alt="" class="icon icon1">
+        <img src="mying/Component 4.png" alt="" class="icon icon2">
+        <img src="mying/Component 5.png" alt="" class="icon icon3">
+    </div>
+    <div id="coupon">
+
+    </div>
+    <footer>
+
+    </footer>
+    <script>
+        window.addEventListener("load", active);
+        window.addEventListener("wheel", go)
+        function active(){
+            $(".title").addClass("on");
+            $(".choice").addClass("on");
+        }
+        function go(){
+            console.log(scrollY);
+            if(scrollY>2000){
+                $(".sns").addClass("on");
+                $(".icon").addClass("on");
+            }
+            else{
+                $(".sns").removeClass("on");
+                $(".icon").removeClass("on");
+            }
+        }
+    </script>
 </body>
 </html>
