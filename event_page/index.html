@@ -188,12 +188,29 @@
             height: 632px;
             margin: 0 auto;
             background: #6A4C4C;
+            padding-top: 75px;
+            box-sizing: border-box; /* calc 대신 씀 */
         }
+        #coupon img{
+            margin: 0 auto;
+        }
+        #coupon img:nth-child(1){
+           
+            margin-bottom: 25px;
+        }
+        #coupon img:nth-child(2){           
+           margin-bottom: 38px;
+       }
         footer{
             margin: 0 auto;
+            padding-top: 23px;
             width: 1000px;
             height: 72px;
             background: #4E2C2B;
+            box-sizing: border-box;
+        }
+        footer img{
+            margin: 0 auto;
         }
         @keyframes move {
             0%{transform: translate(50px, -50px); opacity: 0.3;}
@@ -226,21 +243,23 @@
             <li><img src="mying/Group 6.png" alt=""></li>
             <li><img src="mying/Group 7.png" alt=""></li>
         </ul>
+        
+        <img src="mying/review-bg.png" alt="" class="review_bg">
         <a href="#none">
             <img src="mying/button.png" alt="">
         </a>
-        <img src="mying/review-bg.png" alt="" class="review_bg">
-
         <img src="mying/Component 2.png" alt="" class="icon icon0">
         <img src="mying/Component 3.png" alt="" class="icon icon1">
         <img src="mying/Component 4.png" alt="" class="icon icon2">
         <img src="mying/Component 5.png" alt="" class="icon icon3">
     </div>
     <div id="coupon">
-
+        <img src="mying/coupon_Title.png" alt="">
+        <img src="mying/coupon.png" alt="">
+        <img src="mying/THANK YOU FOR RIA.png" alt="">
     </div>
     <footer>
-
+        <img src="mying/Designed by ck2lucky.png" alt="">
     </footer>
     <script>
         window.addEventListener("load", active);
